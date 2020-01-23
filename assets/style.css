@@ -46,9 +46,15 @@ table {
 
 
 #logo {
-    height: auto;
-    max-height: 100px;
+    height: 100px;
+    width: 100px;
     display: inline;
+}
+
+#logo:hover {
+    display: inline;
+    height: 150px;
+    width: 150px;
 }
 
 #top-banner {
@@ -72,6 +78,11 @@ table {
   color: gray;
   text-align: left;
   margin-bottom: 15px;
+}
+
+.tweet {
+    background: gray;
+    border: black;
 }
 
 
