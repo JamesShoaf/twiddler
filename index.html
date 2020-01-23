@@ -4,26 +4,35 @@
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
     <script src="get_tweets.js"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
   </head>
+  <header>
+    <div id="top-banner">
+      <img id="logo" src="./assets/BIRB.png">
+      <h2>Twiddler</h2>
+      <h5>less than 140 characters or it's free!</h5>
+    </div>
+  </header>
   <body>
-    <script>
+    <div class="tweets">
+      <script>
 
       $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
-
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
-
+        var $tweetCorral = $('<div id="corral"></div>');
+        $tweetCorral.appendTo($('body'));
+        get_new_tweets();
+        
       });
 
-    </script>
+      //$("#logo").click(get_tweet(streams.home[streams.home.length - 1]));
+      $("#logo").click(function(){get_new_tweets()});
+      $("")
+      </script>
+
+
+    </div>
+    
+
+    
   </body>
 </html>
