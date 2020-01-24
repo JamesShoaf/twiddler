@@ -1,26 +1,12 @@
-// var index = streams.home.length - 1;
-// var $body = $('body');
-// var $tweetCorral = $('<div id="corral"></div>');
-// function get_all_tweets(){
-    
-//     while(index >= 0){
-//           var tweet = streams.home[index];
-//           var $tweet = $('<div class="tweet"></div>');
-//           $tweet.text('@' + tweet.user + ': ' + tweet.message);
-//           $tweet.appendTo($tweetCorral);
-//           index -= 1;
-//         }
-// }
-
 var index = 0;
 var currentUser = 'home';
 var $tweetCorral = $('<div id="corral"></div>');
 
 var clear_the_corral = function(){
   index = 0;
-  var $tweetCorral = $('<div id="corral"></div>');
+  //var $tweetCorral = $('<div id="corral"></div>');
   $("#corral").remove();
-  $tweetCorral.appendTo($('body'));
+  $('<div id="corral"></div>').appendTo($('body'));
 }
 
 var get_new_tweets = function(){
@@ -32,7 +18,6 @@ var get_new_tweets = function(){
     get_tweet(streams.home[index]);
     index += 1;
   }
-
 };
 
 var get_tweet = function(tweet){

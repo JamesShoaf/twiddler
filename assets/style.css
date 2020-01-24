@@ -44,6 +44,10 @@ table {
 
 /* resets end here */
 
+html {
+    min-height: 100%;
+    background-image: linear-gradient(160deg, #a9d0d8 , seagreen);
+}
 
 #logo {
     height: 100px;
@@ -61,28 +65,73 @@ table {
     background-color: orange;
     font-family: sans-serif;
     height: 100px;
+    width: 100%;
     position: relative;
+    white-space: nowrap;
+
 }
 
 #top-banner h2 {
-    font-size: 45px;
+    font-size: 100px;
+    font-style: oblique;
     display: inline;
     vertical-align: top;
     color: green;
-
 }
 
 #top-banner h5{
-  font-size: 15px;
-  display: inline;
-  color: gray;
-  text-align: left;
-  margin-bottom: 15px;
+    font-size: 15px;
+    display: inline;
+    color: black;
+    text-align: left;
+    margin-bottom: 15px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    top: -60%;
+    margin-left: 10px;
+}
+
+#corral {
+    margin-left: 100px;
+    max-width: 80%;
+    box-shadow: 5px 7px #000;
 }
 
 .tweet {
     background: gray;
-    border: black;
+    border-radius: 10px;
+    border-color: black;
+    padding: 5px;
+    box-shadow: 5px 7px #000;
+    color: #570fa7;
+}
+
+.tweet .handle {
+    color: #0985e8;
+}
+
+.tweet .handle:hover {
+    color: #000000;
+}
+
+.tweet .date {
+    float: right;
+    font-size: 10px
+}
+
+.tweet .post {
+    font-size: 20px;
+}
+
+.tweet:nth-child(odd) {
+    background-image: linear-gradient(to right, #f46236 , #f7f48d);
+}
+
+.tweet:nth-child(even) {
+    background-image: linear-gradient(to left, #f44336 , #f7ec8d)
 }
 
 
